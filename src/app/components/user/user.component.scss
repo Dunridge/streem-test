@@ -1,13 +1,33 @@
+@import "src/assets/styles/all";
 
 .user {
   display: flex;
-  width: 75%;
+  justify-content: space-around;
+  background-color: $user-color;
+  width: $user-width;
   margin: 0 auto;
-  height: 250px;
+  height: $user-height;
+
+  &__img-container {
+    height: $full-height;
+    width: $img-percentage;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__statistics {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    //align-items: center;
+  }
+
+  &__statistics-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
   }
 
   &__name {
@@ -16,5 +36,11 @@
 
   &__age {
     display: flex;
+  }
+
+  &__more-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }

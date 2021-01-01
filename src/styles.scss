@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/assets/styles/for-import/_palette.scss"; // all colors
+
+//reset the browser margins
+html,
+body {
+  margin: 0;
+}
+
+// style buttons throughout the project
+button {
+  color: white;
+  width: 247px;
+  height: 51px;
+  background: $button-color;
+  box-shadow: 0 4px 4px $box-shadow;
+  outline: 0;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+//remove default links styling and add your own
+a {
+  color: $link-color;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: $link-active;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+// add default body color:
+// TODO: check whether the website needs to be adaptive
+body {
+  background-color: $body-color;
+}
