@@ -1,37 +1,19 @@
 import {Injectable} from '@angular/core';
-import {User} from '../interfaces/user.interface';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsersService {
 
-  // TODO: replace this mock data with a call to the API
-  // mock data
-  users: User[] = [
-    {
-      name: 'Max',
-      age: 20
-    },
-    {
-      name: 'Vlad',
-      age: 20
-    },
-    {
-      name: 'Kolya',
-      age: 20
-    },
-    {
-      name: 'Dima',
-      age: 20
-    }
-  ];
-
-  constructor() {
+  constructor(
+    private httpClient: HttpClient
+  ) {
   }
 
-  getUsers(): User[] {
-
-    return this.users;
+  getUsers(): Observable<any> {
+    console.log(this.httpClient.get('https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users'));
+    return this.httpClient.get('https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users');
   }
 }
