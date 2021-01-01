@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "streem-test"
+    }
+  },
+  "defaultProject": "streem-test",
+  "cli": {
+    "analytics": "e6cbe816-8819-4a99-b1fd-5b05b80488f4"
+  }
 }
