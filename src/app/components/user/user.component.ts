@@ -29,7 +29,7 @@ export class UserComponent implements OnInit {
     console.log(this.posts);
   }
 
-  displayPosts(): void {
+  displayPosts(): void { // TODO: think about deleting this one and moving it to the template
     this.showPosts = !this.showPosts;
   }
 }

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import {Post} from '../../interfaces/post.interface';
 import {ActivatedRoute} from '@angular/router';
 import {PostsService} from '../../services/posts.service';
@@ -12,7 +12,12 @@ import {User} from '../../interfaces/user.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostComponent implements OnInit {
-  @Input() post: Post;
+  // TODO: make an array
+  // TODO: remove some data from the main page
+
+  // TODO: remove this post field
+  post: Post;
+  posts: Post[];
   user: User;
   userId: string;
 
@@ -29,7 +34,11 @@ export class PostComponent implements OnInit {
         console.log(params.userId);
         this.userId = params.userId;
         this.postsService.getPosts(params.userId)
-          .subscribe(posts => this.post = posts[0]);
+          // .subscribe(posts => this.post = posts[0]);
+          .subscribe(posts => {
+            this.post = posts[0];
+            this.posts = posts;
+          });
       });
 
     console.log(this.userId);
