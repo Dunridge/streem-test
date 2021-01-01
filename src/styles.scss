@@ -14,7 +14,9 @@ button {
   background: $button-color;
   box-shadow: 0 4px 4px $box-shadow;
   outline: 0;
+  border: none;
   border-radius: 50px;
+  cursor: pointer;
 }
 
 //remove default links styling and add your own
