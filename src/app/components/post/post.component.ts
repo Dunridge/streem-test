@@ -6,15 +6,14 @@ import {Post} from '../../interfaces/post.interface';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.scss']
 })
-export class PostComponent implements OnInit, Post {
-  @Input() description: string;
-  @Input() title: string;
+export class PostComponent implements OnInit {
+  @Input() post: Post;
 
   constructor() {
   }
 
   ngOnInit(): void {
+    console.log(this.post);
   }
-
 
 }
