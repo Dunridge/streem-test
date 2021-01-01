@@ -1,0 +1,15 @@
+@import "src/assets/styles/all";
+
+.footer {
+  height: $footer-height;
+  width: $full-width;
+  background-color: $footer-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__copyright {
+    text-align: center;
+    padding-bottom: 4px;
+  }
+}
