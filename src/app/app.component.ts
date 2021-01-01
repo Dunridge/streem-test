@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'streem-test';
+  // TODO: implement reset.css styles to remove default browser styles
 }
