@@ -22,12 +22,15 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.posts = this.postsService.getPosts();
+    this.postsService.getPosts(this.user.id)
+      .subscribe(posts => {
+        // console.log(posts);
+        this.posts = posts;
+      });
     console.log(this.posts);
   }
 
   displayPosts(): void {
-    // TODO: route to posts for the user (see those individual routing in your Coursera project)
     this.showPosts = !this.showPosts;
   }
 }
