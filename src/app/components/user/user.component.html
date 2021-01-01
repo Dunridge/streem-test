@@ -29,6 +29,6 @@
     </div>
   </div>
   <div class="user__more-info" (click)="displayPosts()">
-    <button [routerLink]="['/users', user.id]">Posts</button>
+    <button *ngIf="!hideButton" [routerLink]="['/users', user.id]">Posts</button>
   </div>
 </div>

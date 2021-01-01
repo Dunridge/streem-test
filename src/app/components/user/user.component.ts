@@ -11,6 +11,7 @@ import {Post} from '../../interfaces/post.interface';
 })
 export class UserComponent implements OnInit {
   @Input() user: User;
+  @Input() hideButton = false;
 
   posts: Post[] = [];
   showPosts = false;
