@@ -7,6 +7,7 @@
   width: $user-width;
   margin: $user-margin auto;
   height: $user-height;
+  border-radius: $user-border-radius;
 
   &:nth-of-type(1) {
     margin-top: $user-margin / 2;
