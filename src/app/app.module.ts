@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import {UsersService} from './services/users.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import {RouterModule} from '@angular/router';
     UsersComponent,
     UserComponent,
     PostComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

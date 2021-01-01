@@ -5,7 +5,7 @@
   justify-content: space-around;
   background-color: $user-color;
   width: $user-width;
-  margin: 0 auto;
+  margin: $margin-0 auto;
   height: $user-height;
 
   &__img-container {
@@ -14,13 +14,20 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
+    img {
+      height: $img-dimensions;
+      width: $img-dimensions;
+      border: 16px solid;
+      border-image: linear-gradient($linear-gradient-from, $linear-gradient-to) $border-pattern-width;
+    }
   }
 
   &__statistics {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    //align-items: center;
   }
 
   &__statistics-container {
@@ -44,7 +51,3 @@
     justify-content: center;
   }
 }
-
-//.posts {
-//  margin: 0 auto;
-//}
