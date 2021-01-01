@@ -4,6 +4,12 @@
   height: $header-height;
   background-color: $header-color;
 
+  &__title {
+    font-weight: 600;
+    font-size: $header-font-size;
+    outline: 0;
+  }
+
   &__menu-items {
     display: flex;
     justify-content: space-around;

@@ -1,11 +1,14 @@
 
+// header font-size
+$header-font-size: 36px;
+$header-height: 88px;
+$footer-height: $header-height * 0.9;
+
 $user-width: 65%;
 $user-statistics-right-margin: 0.15 * $user-width; // 50px
 $img-percentage: 15%;
 $user-height: 250px;
 $full-height: 100%;
-$header-height: 88px;
-$footer-height: $header-height * 0.9;
 
 // full width
 $full-width: 100%;
