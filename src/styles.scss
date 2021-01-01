@@ -1,8 +1,9 @@
 @import "src/assets/styles/for-import/_palette.scss"; // all colors
 
-//reset the browser margins
+//reset the browser margins and set the min-width
 html,
 body {
+  min-width: 1500px;
   margin: 0;
 }
 

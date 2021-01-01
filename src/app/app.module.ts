@@ -9,6 +9,7 @@ import { PostComponent } from './components/post/post.component';
 import { HeaderComponent } from './components/header/header.component';
 import {UsersService} from './services/users.service';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule
   ],
   providers: [
     UsersService
