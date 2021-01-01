@@ -1,19 +1,24 @@
 <div class="user">
   <!--  TODO: add a routerLink here to route to user posts-->
-  <div class="user__img-container">
-    <img src="" alt="user image">
-  </div>
-  <div class="user__statistics">
-    <div class="user__name">
-      <div class="user__name-placeholder">Name:</div>
-      <div class="user__name-text">{{name}}</div>
+    <div class="user__img-container">
+      <img src="assets/images/user-2.svg" alt="user image">
     </div>
-    <div class="user__age">
-      <div class="user__age-placeholder">Age:</div>
-      <div class="user__age-value">{{age}}</div>
+    <div class="user__statistics">
+      <div class="user__statistics-container">
+        <div class="user__statistics-title">Statistics</div>
+        <div class="user__name">
+          <div class="user__name-placeholder">Name:</div>
+          <div class="user__name-text">{{name}}</div>
+        </div>
+        <div class="user__age">
+          <div class="user__age-placeholder">Age:</div>
+          <div class="user__age-value">{{age}}</div>
+        </div>
+      </div>
     </div>
+  <div class="user__more-info" (click)="displayPosts()">
+    <button>Posts</button>
   </div>
-  <div class="user__more-info" (click)="displayPosts()">Posts</div>
 </div>
 
 <!--TODO: for now display the details here and later on you'll add a route (see Coursera)-->
