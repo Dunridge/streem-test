@@ -30,14 +30,16 @@
     </div>
   </div>
   <div class="user__more-info" (click)="displayPosts()">
-    <button>Posts</button>
+    <a [routerLink]="['/users', user.id]">Posts</a>
   </div>
 </div>
 
+<!--TODO: you're routing to views but you need to get the id in the post component from the route and fetch the posts-->
+
 <!--TODO: add translation to the project-->
 <!--TODO: don't bother with the styles, because you're going to move this to a route anyway-->
-<ng-container *ngIf="showPosts">
-  <ng-container *ngFor="let post of posts">
-    <app-post [post]="post"></app-post>
-  </ng-container>
-</ng-container>
+<!--<ng-container *ngIf="showPosts">-->
+<!--  <ng-container *ngFor="let post of posts">-->
+<!--    <app-post [post]="post"></app-post>-->
+<!--  </ng-container>-->
+<!--</ng-container>-->

@@ -1,8 +1,8 @@
 <div class="post">
 <!--  TODO: add the default image when the value is null-->
   <img [src]="post.image" alt="post image">
-<!--  <div class="post__image">{{post.image}}</div>-->
   <div class="post__edited-at">{{post.editedAt}}</div>
   <div class="post__created-at">{{post.createAt}}</div>
   <div class="post__content">{{post.content}}</div>
+  <button routerLink="/users" class="post__go-back">Go back</button>
 </div>
