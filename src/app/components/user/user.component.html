@@ -1,0 +1,25 @@
+<div class="user">
+  <!--  TODO: add a routerLink here to route to user posts-->
+  <div class="user__img-container">
+    <img src="" alt="user image">
+  </div>
+  <div class="user__statistics">
+    <div class="user__name">
+      <div class="user__name-placeholder">Name:</div>
+      <div class="user__name-text">{{name}}</div>
+    </div>
+    <div class="user__age">
+      <div class="user__age-placeholder">Age:</div>
+      <div class="user__age-value">{{age}}</div>
+    </div>
+  </div>
+  <div class="user__more-info" (click)="displayPosts()">Posts</div>
+</div>
+
+<!--TODO: for now display the details here and later on you'll add a route (see Coursera)-->
+<!--TODO: add translation to the project-->
+<ng-container *ngIf="showPosts">
+  <ng-container *ngFor="let post of posts">
+    <app-post [title]="post.title" [description]="post.description"></app-post>
+  </ng-container>
+</ng-container>
