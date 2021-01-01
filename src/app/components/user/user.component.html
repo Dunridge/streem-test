@@ -8,12 +8,25 @@
         <div class="user__statistics-title">Statistics</div>
         <div class="user__name">
           <div class="user__name-placeholder">Name:</div>
-          <div class="user__name-text">{{name}}</div>
+          <div class="user__name-text">{{user.name}}</div>
         </div>
         <div class="user__age">
-          <div class="user__age-placeholder">Age:</div>
-          <div class="user__age-value">{{age}}</div>
+          <div class="user__age-placeholder">Phone:</div>
+          <div class="user__age-value">{{user.phone}}</div>
         </div>
+        <div class="user__age">
+          <div class="user__age-placeholder">Role:</div>
+          <div class="user__age-value">{{user.role}}</div>
+        </div>
+        <div class="user__age">
+          <div class="user__age-placeholder">City:</div>
+          <div class="user__age-value">{{user.city}}</div>
+        </div>
+        <div class="user__age">
+          <div class="user__age-placeholder">Created at:</div>
+          <div class="user__age-value">{{user.createdAt}}</div>
+        </div>
+
       </div>
     </div>
   <div class="user__more-info" (click)="displayPosts()">

@@ -9,11 +9,9 @@ import {Post} from '../../interfaces/post.interface';
   styleUrls: ['./user.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserComponent implements OnInit, User {
+export class UserComponent implements OnInit {
   // TODO: add linting
-
-  @Input() age: number;
-  @Input() name: string;
+  @Input() user: User;
 
   posts: Post[] = [];
   showPosts = false;

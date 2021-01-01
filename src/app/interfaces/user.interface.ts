@@ -1,6 +1,10 @@
 
-// TODO: refine this when you get the data from the api
 export interface User {
+  avatar: string;
+  city: string;
+  createdAt: string;
+  id: number;
   name: string;
-  age: number;
+  phone: string;
+  role: string;
 }
