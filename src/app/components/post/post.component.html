@@ -1,7 +1,5 @@
 <div class="post">
-  <!--  TODO: add the default image when the value is null-->
-  <!--  TODO: consider adding translation-->
-  <img [src]="post.image" alt="post image">
+  <img [src]="post.image || 'assets/images/default-post.jpg'" alt="post image">
   <div class="post__content">
     <div class="post__content">{{post.content}}</div>
     <div class="post__edited-at">{{post.editedAt}}</div>

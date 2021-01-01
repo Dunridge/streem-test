@@ -2,11 +2,11 @@
   <!--  TODO: add a routerLink here to route to user posts-->
   <div class="user__img-container">
 <!--    <img src="assets/images/user-2.svg" alt="user image">-->
-    <img [src]="user.avatar" alt="user avatar">
+    <img [src]="user.avatar || 'assets/images/user-2.svg'" alt="user avatar">
   </div>
   <div class="user__statistics">
     <div class="user__statistics-container">
-      <div class="user__statistics-title">Statistics</div>
+      <div class="user__statistics-title">Statistics:</div>
       <div class="user__name">
         <div class="user__name-placeholder">Name:</div>
         <div class="user__name-text">{{user.name}}</div>
@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="user__more-info" (click)="displayPosts()">
-    <a [routerLink]="['/users', user.id]">Posts</a>
+    <button [routerLink]="['/users', user.id]">Posts</button>
   </div>
 </div>
 
