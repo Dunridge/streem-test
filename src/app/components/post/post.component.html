@@ -1,8 +1,13 @@
 <div class="post">
-<!--  TODO: add the default image when the value is null-->
+  <!--  TODO: add the default image when the value is null-->
+  <!--  TODO: consider adding translation-->
   <img [src]="post.image" alt="post image">
-  <div class="post__edited-at">{{post.editedAt}}</div>
-  <div class="post__created-at">{{post.createAt}}</div>
-  <div class="post__content">{{post.content}}</div>
-  <button routerLink="/users" class="post__go-back">Go back</button>
+  <div class="post__content">
+    <div class="post__content">{{post.content}}</div>
+    <div class="post__edited-at">{{post.editedAt}}</div>
+    <div class="post__created-at">{{post.createAt}}</div>
+  </div>
+  <div class="post__btn-container">
+    <button routerLink="/users" class="post__go-back">Go back</button>
+  </div>
 </div>
