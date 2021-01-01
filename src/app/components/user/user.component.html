@@ -1,12 +1,10 @@
 <div class="user">
-  <!--  TODO: add a routerLink here to route to user posts-->
   <div class="user__img-container">
-<!--    <img src="assets/images/user-2.svg" alt="user image">-->
-    <img [src]="user.avatar" alt="user avatar">
+    <img [src]="user.avatar || 'assets/images/user-2.svg'" alt="user avatar">
   </div>
   <div class="user__statistics">
     <div class="user__statistics-container">
-      <div class="user__statistics-title">Statistics</div>
+      <div class="user__statistics-title">Statistics:</div>
       <div class="user__name">
         <div class="user__name-placeholder">Name:</div>
         <div class="user__name-text">{{user.name}}</div>
@@ -15,15 +13,15 @@
         <div class="user__age-placeholder">Phone:</div>
         <div class="user__age-value">{{user.phone}}</div>
       </div>
-      <div class="user__age">
+      <div class="user__role">
         <div class="user__age-placeholder">Role:</div>
         <div class="user__age-value">{{user.role}}</div>
       </div>
-      <div class="user__age">
+      <div class="user__city">
         <div class="user__age-placeholder">City:</div>
         <div class="user__age-value">{{user.city}}</div>
       </div>
-      <div class="user__age">
+      <div class="user__created-at">
         <div class="user__age-placeholder">Created at:</div>
         <div class="user__age-value">{{user.createdAt}}</div>
       </div>
@@ -31,16 +29,6 @@
     </div>
   </div>
   <div class="user__more-info" (click)="displayPosts()">
-    <a [routerLink]="['/users', user.id]">Posts</a>
+    <button [routerLink]="['/users', user.id]">Posts</button>
   </div>
 </div>
-
-<!--TODO: you're routing to views but you need to get the id in the post component from the route and fetch the posts-->
-
-<!--TODO: add translation to the project-->
-<!--TODO: don't bother with the styles, because you're going to move this to a route anyway-->
-<!--<ng-container *ngIf="showPosts">-->
-<!--  <ng-container *ngFor="let post of posts">-->
-<!--    <app-post [post]="post"></app-post>-->
-<!--  </ng-container>-->
-<!--</ng-container>-->

@@ -3,6 +3,13 @@
 .header {
   height: $header-height;
   background-color: $header-color;
+  cursor: pointer;
+
+  &__title {
+    font-weight: 600;
+    font-size: $header-font-size;
+    outline: 0;
+  }
 
   &__menu-items {
     display: flex;

@@ -7,9 +7,17 @@ body {
   margin: 0;
 }
 
+body {
+  background-image: url("assets/images/lego-bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 // style buttons throughout the project
 button {
-  color: white;
+  color: black;
   width: 247px;
   height: 51px;
   background: $button-color;

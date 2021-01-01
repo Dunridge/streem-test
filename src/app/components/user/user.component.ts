@@ -10,7 +10,6 @@ import {Post} from '../../interfaces/post.interface';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserComponent implements OnInit {
-  // TODO: add linting
   @Input() user: User;
 
   posts: Post[] = [];
@@ -24,7 +23,6 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
     this.postsService.getPosts(this.user.id)
       .subscribe(posts => {
-        // console.log(posts);
         this.posts = posts;
       });
     console.log(this.posts);
