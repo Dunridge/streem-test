@@ -6,14 +6,12 @@ import {UsersService} from '../../services/users.service';
 import {User} from '../../interfaces/user.interface';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss'],
+  selector: 'app-posts',
+  templateUrl: './posts.component.html',
+  styleUrls: ['./posts.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PostComponent implements OnInit {
-  // TODO: remove some data from the main page
-
+export class PostsComponent implements OnInit {
   posts: Post[];
   user: User;
   userId: string;
@@ -28,7 +26,6 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.route.params
       .subscribe(params => {
-        console.log(params.userId);
         this.userId = params.userId;
         this.postsService.getPosts(params.userId)
           .subscribe(posts => {
@@ -36,14 +33,9 @@ export class PostComponent implements OnInit {
           });
       });
 
-    console.log(this.userId);
-
     this.usersService.getUsers()
       .subscribe(users => {
-        console.log(users);
         this.user = users.find(user => user.id === this.userId);
-        console.log(this.user);
       });
-    console.log(this.user);
   }
 }
