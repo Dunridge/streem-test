@@ -22,13 +22,10 @@ export class UserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('before check', this.user.id);
     const userId = this.user == null ? 1 : this.user.id;
-    console.log('after check', userId);
     this.postsService.getPosts(userId)
       .subscribe(posts => {
         this.posts = posts;
       });
-    console.log(this.posts);
   }
 }
