@@ -15,6 +15,10 @@
     border-image: linear-gradient($linear-gradient-from, $linear-gradient-to) $border-pattern-width;
   }
 
+  &__content {
+    padding-bottom: $user-margin;
+  }
+
   &__go-back {
     margin: 40px;
   }

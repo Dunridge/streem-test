@@ -28,6 +28,9 @@
 
     </div>
   </div>
+  <div class="user__close-post">
+    <button *ngIf="hideButton" routerLink="/users">Go back</button>
+  </div>
   <div class="user__more-info" (click)="displayPosts()">
     <button *ngIf="!hideButton" [routerLink]="['/users', user.id]">Posts</button>
   </div>
