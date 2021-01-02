@@ -1,10 +1,12 @@
 @import "src/assets/styles/for-import/_palette.scss"; // all colors
+@import "src/assets/styles/for-import/_general.scss";
 
 //reset the browser margins and set the min-width
 html,
 body {
-  min-width: 1500px;
-  margin: 0;
+  height: 100%;
+  min-width: $min-width;
+  margin: $margin-0;
 }
 
 body {
@@ -21,7 +23,7 @@ button {
   width: 247px;
   height: 51px;
   background: $button-color;
-  box-shadow: 0 4px 4px $box-shadow;
+  box-shadow: 0 $box-shadow-width $box-shadow-width $box-shadow;
   outline: 0;
   border: none;
   border-radius: 50px;
