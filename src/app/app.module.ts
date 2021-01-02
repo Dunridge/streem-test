@@ -5,21 +5,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { UserComponent } from './components/user/user.component';
-import { PostComponent } from './components/post/post.component';
+import { PostsComponent } from './components/posts/posts.component';
 import { HeaderComponent } from './components/header/header.component';
 import {UsersService} from './services/users.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsersComponent,
     UserComponent,
-    PostComponent,
+    PostsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AppLayoutComponent
   ],
   imports: [
     BrowserModule,

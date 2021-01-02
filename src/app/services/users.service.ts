@@ -13,7 +13,6 @@ export class UsersService {
   }
 
   getUsers(): Observable<any> {
-    console.log(this.httpClient.get('https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users'));
     return this.httpClient.get('https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users');
   }
 }

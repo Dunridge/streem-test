@@ -1,0 +1,12 @@
+@import "src/assets/styles/all";
+
+.api-error {
+  display: flex;
+  justify-content: center;
+  margin: $margin-20 auto;
+  background-color: $user-color;
+  width: $user-width;
+  height: $user-width / 2;
+  padding: $font-size-20px 0;
+  font-size: $font-size-26px;
+}
