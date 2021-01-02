@@ -1,6 +1,11 @@
 <div class="user">
   <div class="user__img-container">
-    <img [src]="user?.avatar || 'assets/images/user-2.svg'" alt="user avatar">
+    <ng-container *ngIf="user?.avatar; else defaultAvatar">
+      <img [src]="user?.avatar" alt="profile image">
+    </ng-container>
+    <ng-template #defaultAvatar>
+      <img src='assets/images/user-2.svg' alt="post image">
+    </ng-template>
   </div>
   <div class="user__statistics">
     <div class="user__statistics-container">
