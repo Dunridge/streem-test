@@ -1,6 +1,6 @@
 <div class="user">
   <div class="user__img-container">
-    <img [src]="user.avatar || 'assets/images/user-2.svg'" alt="user avatar">
+    <img [src]="user?.avatar || 'assets/images/user-2.svg'" alt="user avatar">
   </div>
   <div class="user__statistics">
     <div class="user__statistics-container">
@@ -31,7 +31,7 @@
   <div class="user__close-post">
     <button *ngIf="hideButton" routerLink="/users">Go back</button>
   </div>
-  <div class="user__more-info" (click)="displayPosts()">
+  <div class="user__more-info">
     <button *ngIf="!hideButton" [routerLink]="['/users', user.id]">Posts</button>
   </div>
 </div>

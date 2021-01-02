@@ -1,12 +1,9 @@
 <app-user [user]="user" [hideButton]="true"></app-user>
 <div *ngFor="let post of posts" class="post">
-  <img [src]="post.image || 'assets/images/default-post.jpg'" alt="post image">
+  <img [src]="post?.image || 'assets/images/default-post.jpg'" height="512" width="672" alt="post image">
   <div class="post__content">
     <div class="post__content">{{post.content}}</div>
     <div class="post__edited-at">{{post.editedAt}}</div>
     <div class="post__created-at">{{post.createAt}}</div>
   </div>
-<!--  <div class="post__btn-container">-->
-<!--    <button routerLink="/users" class="post__go-back">Go back</button>-->
-<!--  </div>-->
 </div>
