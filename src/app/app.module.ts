@@ -11,6 +11,7 @@ import {UsersService} from './services/users.service';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppLayoutComponent } from './app-layout/app-layout.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './components/footer/footer.component';
     UserComponent,
     PostsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AppLayoutComponent
   ],
   imports: [
     BrowserModule,
