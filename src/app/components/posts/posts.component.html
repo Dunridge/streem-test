@@ -1,9 +1,17 @@
 <app-user [user]="user" [hideButton]="true"></app-user>
-<div *ngFor="let post of posts" class="post">
-  <img [src]="post?.image || 'assets/images/default-post.jpg'" height="512" width="672" alt="post image">
-  <div class="post__content">
-    <div class="post__content">{{post.content}}</div>
-    <div class="post__edited-at">{{post.editedAt}}</div>
-    <div class="post__created-at">{{post.createAt}}</div>
+<ng-container *ngIf="posts; else apiError">
+  <div *ngFor="let post of posts" class="post">
+    <img [src]="post?.image || 'assets/images/default-post.jpg'" height="512" width="672" alt="post image">
+    <div class="post__content">
+      <div class="post__content">{{post.content}}</div>
+      <div class="post__edited-at">{{post.editedAt}}</div>
+      <div class="post__created-at">{{post.createAt}}</div>
+    </div>
   </div>
-</div>
+</ng-container>
+
+<ng-template #apiError>
+  <div class="api-error">
+    <p>Something's wrong with the API, wait a couple of seconds and reload the page</p>
+  </div>
+</ng-template>

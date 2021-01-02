@@ -27,3 +27,15 @@
     margin-left: auto;
   }
 }
+
+.api-error {
+  display: flex;
+  justify-content: center;
+  margin: $margin-0 auto;
+  background-color: $user-color;
+  width: $user-width;
+  height: $user-width / 2;
+  padding: 20px 0;
+  font-size: $font-size-26px;
+  margin-bottom: 20px;
+}
