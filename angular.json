@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "streem-test": {
+    "streams-test": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/streem-test",
+            "outputPath": "dist/streams-test",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "streem-test:build"
+            "browserTarget": "streams-test:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "streem-test:build:production"
+              "browserTarget": "streams-test:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "streem-test:build"
+            "browserTarget": "streams-test:build"
           }
         },
         "test": {
@@ -114,18 +114,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "streem-test:serve"
+            "devServerTarget": "streams-test:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "streem-test:serve:production"
+              "devServerTarget": "streams-test:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "streem-test",
+  "defaultProject": "streams-test",
   "cli": {
     "analytics": "e6cbe816-8819-4a99-b1fd-5b05b80488f4"
   }
