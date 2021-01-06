@@ -12,6 +12,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
+import {StoreModule} from '@ngrx/store';
+import {simpleReducer} from './reducers/simple.reducer';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { AppLayoutComponent } from './app-layout/app-layout.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    StoreModule.forRoot({ message: simpleReducer })
   ],
   providers: [
     UsersService
