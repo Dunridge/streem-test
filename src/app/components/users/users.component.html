@@ -1,8 +1,10 @@
-<ng-container *ngIf="users; else apiError">
+<ng-container *ngIf="users$ | async as users; else apiError">
   <ng-container *ngFor="let user of users">
     <app-user [user]="user" [hideButton]="false"></app-user>
   </ng-container>
 </ng-container>
+
+<!--<div>{{ users$ | async }}</div>-->
 
 <ng-template #apiError>
   <div class="api-error">
