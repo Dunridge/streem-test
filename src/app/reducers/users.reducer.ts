@@ -10,11 +10,6 @@ const initialState: UsersState = {
 };
 
 export function usersReducer(state = initialState, action: UsersActions): UsersState {
-  console.log(action.type);
-  console.log(action);
-  // console.log(action.payload); // you have the users here
-
-  console.log(state);
 
   switch (action.type) {
     case '[Users] Load users': {
@@ -22,8 +17,6 @@ export function usersReducer(state = initialState, action: UsersActions): UsersS
     }
 
     case '[Users] Load users success': {
-      console.log('case triggered');
-      console.log(action);
       return {
         users: [...action.payload]
       };

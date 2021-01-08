@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 
-interface AppState { // TODO: move this to the interfaces folder
+interface AppState {
   message: string;
 }
 
