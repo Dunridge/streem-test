@@ -14,6 +14,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AppLayoutComponent } from './app-layout/app-layout.component';
 import {StoreModule} from '@ngrx/store';
 import {simpleReducer} from './reducers/simple.reducer';
+import {EffectsModule} from '@ngrx/effects';
+import {UsersEffects} from './effects/users.effects';
+import {usersReducer} from './reducers/users.reducer';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,8 @@ import {simpleReducer} from './reducers/simple.reducer';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    StoreModule.forRoot({ message: simpleReducer })
+    StoreModule.forRoot({ message: simpleReducer, users: usersReducer }),
+    EffectsModule.forRoot([UsersEffects])
   ],
   providers: [
     UsersService
