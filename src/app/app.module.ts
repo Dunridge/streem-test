@@ -33,7 +33,7 @@ import {usersReducer} from './reducers/users.reducer';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    StoreModule.forRoot({ message: simpleReducer, users: usersReducer }),
+    StoreModule.forRoot({ users: usersReducer }),
     EffectsModule.forRoot([UsersEffects])
   ],
   providers: [

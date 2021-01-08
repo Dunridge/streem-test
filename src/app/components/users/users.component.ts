@@ -3,6 +3,7 @@ import {User} from '../../interfaces/user.interface';
 import {UsersService} from '../../services/users.service';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
+import {UsersState} from '../../reducers/users.reducer';
 
 @Component({
   selector: 'app-users',
@@ -10,16 +11,12 @@ import {Store} from '@ngrx/store';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users$: Observable<{ users: User[]}> = this.store.select(state => {
-    // console.log(state.users);
+  users$: Observable<UsersState> = this.store.select(state => {
+    console.log(state.users);
     // console.log(state.users.users);
+    // @ts-ignore
     return state.users.users;
   });
-  // users$: Observable<User[]> = this.store.select(state => {
-  //   console.log(state.users);
-  //   console.log(state.users);
-  //   return state.users;
-  // });
 
   constructor(
     private store: Store<{ users: User[] }>
