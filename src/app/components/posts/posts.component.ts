@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {PostsService} from '../../services/posts.service';
 import {UsersService} from '../../services/users.service';
 import {User} from '../../interfaces/user.interface';
+import {Store} from '@ngrx/store';
 
 @Component({
   selector: 'app-posts',
@@ -17,6 +18,7 @@ export class PostsComponent implements OnInit {
   userId: string;
 
   constructor(
+    private store: Store<{ users: User[] }>,
     private route: ActivatedRoute,
     private postsService: PostsService,
     private usersService: UsersService
