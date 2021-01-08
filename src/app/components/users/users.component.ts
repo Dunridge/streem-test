@@ -10,10 +10,16 @@ import {Store} from '@ngrx/store';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users$: Observable<User[]> = this.store.select(state => {
-    console.log(state);
-    return state.users;
+  users$: Observable<{ users: User[]}> = this.store.select(state => {
+    // console.log(state.users);
+    // console.log(state.users.users);
+    return state.users.users;
   });
+  // users$: Observable<User[]> = this.store.select(state => {
+  //   console.log(state.users);
+  //   console.log(state.users);
+  //   return state.users;
+  // });
 
   constructor(
     private store: Store<{ users: User[] }>
@@ -22,5 +28,6 @@ export class UsersComponent implements OnInit {
 
   ngOnInit(): void {
     this.store.dispatch({type: '[Users] Load users'});
+    console.log(this.users$);
   }
 }

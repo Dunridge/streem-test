@@ -31,6 +31,8 @@ export function usersReducer(state = initialState, action: UsersActions): UsersS
     }
 
     case '[Users] Load users success': {
+      console.log('case triggered');
+      console.log(action);
       return {
         users: [...action.payload]
       };
