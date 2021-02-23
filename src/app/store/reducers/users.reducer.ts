@@ -1,5 +1,6 @@
 import {User} from '../models/user.interface';
-import {UsersActions} from '../actions/users/users.actions';
+import { UsersActions} from '../actions/users/users.actions';
+
 
 export interface UsersState {
   users: User[];

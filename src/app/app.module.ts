@@ -16,6 +16,8 @@ import {StoreModule} from '@ngrx/store';
 import {EffectsModule} from '@ngrx/effects';
 import {UsersEffects} from './store/effects/users.effects';
 import {usersReducer} from './store/reducers/users.reducer';
+import {postsReducer} from './store/reducers/posts.reducer';
+import {PostsEffects} from './store/effects/posts.effects';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,9 @@ import {usersReducer} from './store/reducers/users.reducer';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    StoreModule.forRoot({ users: usersReducer }),
-    EffectsModule.forRoot([UsersEffects])
+    // TODO: add StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}) to debug
+    StoreModule.forRoot({ users: usersReducer, posts: postsReducer }),
+    EffectsModule.forRoot([UsersEffects, PostsEffects])
   ],
   providers: [
     UsersService

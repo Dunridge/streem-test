@@ -13,6 +13,7 @@ export class PostsService {
   }
 
   getPosts(userId: number): Observable<any> {
+    console.log(userId);
     return this.httpClient.get(`https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users/${userId}/posts`);
   }
 }
