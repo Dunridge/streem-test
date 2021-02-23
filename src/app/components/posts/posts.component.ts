@@ -17,7 +17,6 @@ import {PostsActionTypes} from '../../store/actions/posts/posts.actions';
 })
 export class PostsComponent implements OnInit {
   posts$: Observable<Post[]>;
-  posts: Post[]; // tmp
   user: User;
   userId: string;
 

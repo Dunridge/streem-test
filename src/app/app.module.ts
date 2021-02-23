@@ -1,6 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
-
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {UsersComponent} from './components/users/users.component';
@@ -18,6 +17,8 @@ import {UsersEffects} from './store/effects/users.effects';
 import {usersReducer} from './store/reducers/users.reducer';
 import {postsReducer} from './store/reducers/posts.reducer';
 import {PostsEffects} from './store/effects/posts.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -34,9 +35,9 @@ import {PostsEffects} from './store/effects/posts.effects';
     AppRoutingModule,
     HttpClientModule,
     RouterModule,
-    // TODO: add StoreDevtoolsModule.instrument({maxAge: 25, logOnly: environment.production}) to debug
     StoreModule.forRoot({ users: usersReducer, posts: postsReducer }),
-    EffectsModule.forRoot([UsersEffects, PostsEffects])
+    EffectsModule.forRoot([UsersEffects, PostsEffects]),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [
     UsersService
