@@ -1,5 +1,5 @@
 import {User} from '../models/user.interface';
-import { UsersActions} from '../actions/users/users.actions';
+import {UsersActions, UsersActionTypes} from '../actions/users/users.actions';
 
 
 export interface UsersState {
@@ -13,11 +13,11 @@ const initialState: UsersState = {
 export function usersReducer(state = initialState, action: UsersActions): UsersState {
 
   switch (action.type) {
-    case '[Users] Load users': {
+    case UsersActionTypes.LOAD_USERS: {
       return {...state};
     }
 
-    case '[Users] Load users success': {
+    case UsersActionTypes.LOAD_USERS_SUCCESS: {
       return {
         users: [...action.payload]
       };
