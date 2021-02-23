@@ -17,12 +17,7 @@ import {PostsActionTypes} from '../../store/actions/posts/posts.actions';
 })
 export class PostsComponent implements OnInit {
   posts$: Observable<Post[]>;
-  // posts$: Observable<Post[]> = this.store.select(state => {
-  //   console.log(state);
-  //   console.log(state.posts);
-  //   return state.posts;
-  // });
-  // posts: Post[];
+  posts: Post[]; // tmp
   user: User;
   userId: string;
 
@@ -38,10 +33,6 @@ export class PostsComponent implements OnInit {
     this.route.params
       .subscribe(params => {
         this.userId = params.userId;
-        // this.postsService.getPosts(params.userId)
-        //   .subscribe(posts => {
-        //     this.posts = posts;
-        //   });
       });
 
     this.store.dispatch({type: PostsActionTypes.LOAD_POSTS, payload: this.userId});
@@ -51,10 +42,9 @@ export class PostsComponent implements OnInit {
         this.user = users.find(user => user.id === this.userId);
       });
 
-    //
     this.posts$ = this.store.select(store => {
-      console.log(store.posts);
-      return store.posts;
+      // @ts-ignore
+      return store.posts.posts;
     });
   }
 }
