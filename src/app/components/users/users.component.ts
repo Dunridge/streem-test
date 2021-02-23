@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {User} from '../../interfaces/user.interface';
+import {User} from '../../store/models/user.interface';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
-import {UsersState} from '../../reducers/users.reducer';
+import {AppState} from '../../store/models/app-state.model';
 
 @Component({
   selector: 'app-users',
@@ -10,13 +10,15 @@ import {UsersState} from '../../reducers/users.reducer';
   styleUrls: ['./users.component.scss']
 })
 export class UsersComponent implements OnInit {
-  users$: Observable<UsersState> = this.store.select(state => {
+  users$: Observable<User[]> = this.store.select(state => {
     // @ts-ignore
     return state.users.users;
   });
 
+  // TODO: correcting these parts according to your NgRx tutorial app materials (...) --
+  //  -- did for users, now implementing for posts...
   constructor(
-    private store: Store<{ users: User[] }>
+    private store: Store<AppState>
   ) {
   }
 

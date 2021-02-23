@@ -1,5 +1,4 @@
-import {createAction} from '@ngrx/store';
-import {User} from '../interfaces/user.interface';
+import {User} from '../../models/user.interface';
 
 export class FetchUsers {
   readonly type = '[Users] Load users';

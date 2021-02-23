@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import {Post} from '../../interfaces/post.interface';
+import {Post} from '../../store/models/post.interface';
 import {ActivatedRoute} from '@angular/router';
 import {PostsService} from '../../services/posts.service';
 import {UsersService} from '../../services/users.service';
-import {User} from '../../interfaces/user.interface';
+import {User} from '../../store/models/user.interface';
 import {Store} from '@ngrx/store';
 
 @Component({
